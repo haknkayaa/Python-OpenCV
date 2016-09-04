@@ -3,27 +3,27 @@
 # @date       :  03.09.2016
 # @description:  Capture video from camera device
 
-# Kütüphaneler
+# Kutuphaneler
 import numpy as np
 import cv2
 
-# Aygıt adı tanımalaması
+# Aygit adi tanimalamasi
 cap = cv2.VideoCapture(1)
 
 while(True):
     # yakalama
     ret, frame = cap.read()
 
-    # yakalandıktan sonra işlem yapma
+    # yakalandiktan sonra islem yapma
     gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
 
-    # Gösterme
+    # Gosterme
     cv2.imshow('frame',gray)
 
-    #Çıkış için Q
+    # Cikis icin Q
     if cv2.waitKey(1) & 0xFF == ord('q'):
         break
 
-# Her şey tamamlandığında kapat
+# Her sey tamamlandiginda kapat
 cap.release()
 cv2.destroyAllWindows()
