@@ -14,6 +14,7 @@ while(True):
     # yakalama
     ret, frame = cap.read()
 
+    # cap.read() True/False dondurur islem basarili yada degilse
     if cap.read() == False:
         print ("Okuma islemi hatali sonuclandi")
 
