@@ -14,6 +14,9 @@ while(True):
     # yakalama
     ret, frame = cap.read()
 
+    if cap.read() == False:
+        print ("Okuma islemi hatali sonuclandi")
+
     # yakalandiktan sonra islem yapma
     gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
 
