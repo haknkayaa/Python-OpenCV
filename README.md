@@ -1,3 +1,2 @@
 # Python
-Python calismalarim
-sdfsdfsdfsddf
+Unutmayayım diye yazdıklarım...
