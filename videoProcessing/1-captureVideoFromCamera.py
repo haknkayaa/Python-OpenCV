@@ -1,14 +1,21 @@
 # @title      :  Capture Video From Camera
 # @author     :  Hakan Kaya
 # @date       :  03.09.2016
-# @description:  Capture video from camera device
+# @description:  Video okuma ve gosterme islemi yapilmasi
 
 # Kutuphaneler
 import numpy as np
 import cv2
 
-# Aygit adi tanimalamasi
+# Nesne yaratilmasi
 cap = cv2.VideoCapture(1)
+
+# Acilma sorgulamasi
+print "Opened? " + str(cap.isOpened())
+
+if cap.isOpened() == False:
+    cap.open(1)
+
 
 while(True):
     # yakalama
@@ -17,6 +24,7 @@ while(True):
     # cap.read() True/False dondurur islem basarili yada degilse
     if cap.read() == False:
         print ("Okuma islemi hatali sonuclandi")
+        break
 
     # yakalandiktan sonra islem yapma
     gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
@@ -26,6 +34,7 @@ while(True):
 
     # Cikis icin Q
     if cv2.waitKey(1) & 0xFF == ord('q'):
+        print "Cikis yapildi"
         break
 
 # Her sey tamamlandiginda kapat
