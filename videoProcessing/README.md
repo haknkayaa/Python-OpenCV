@@ -1,7 +1,7 @@
 # Video Processing
 =================================
 
-@author      : Hakan Kaya
+@author      : Hakan Kaya 
 @date        : 10.09.2016
 @description :
 
