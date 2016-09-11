@@ -6,8 +6,8 @@
  **Mail**    [mail@hakankaya.kim](mailto:mail@hakankaya.kim)
 
 
-> Temel fonksiyonlardan karmaşık fonksiyonlara kadar uzan görüntü işleme
-> ve video işleme çalışamalarım derli toplu halde paylaştım.
+> Temel fonksiyonlardan karmaşık fonksiyonlara kadar uzanan görüntü işleme
+> ve video işleme çalışamalarım...
 
 ### OpenCV - Video İşleme  çalışmalarım
 
