@@ -1,28 +1,36 @@
-# @title      :  Capture Video From File
+# @title      :  Dosyadan Goruntu Alma
 # @author     :  Hakan Kaya
 # @date       :  03.09.2016
+# @update     :  11.09.2016
 # @description:  Video okuma ve gosterme islemi yapilmasi
 
 # Kutuphaneler
 import numpy as np
 import cv2
 
+print """
+-----------------------------------------------
+ Dosyadan goruntu aktarilma basladi...
+ Not: Cikmak icin ESC'ye (ESCAPE) basiniz.
+-----------------------------------------------
+"""
+
 # Nesne yaratilmasi
-cap = cv2.VideoCapture('./Assets/test.avi')
+medyam = cv2.VideoCapture('./Assets/video1.mp4')
 
-# Acilma sorgulamasi
-print "Opened? " + str(cap.isOpened())
 
-if cap.isOpened() == False:
-    cap.open('./Assets/test.avi')
+if medyam.isOpened() == False:
+    print "Hata: Medya acilamadi."
+    medyam.open('./Assets/video1.mp4')
 
 
 while(True):
+
     # yakalama
-    ret, frame = cap.read()
+    ret, frame = medyam.read()
 
     # cap.read() True/False dondurur islem basarili yada degilse
-    if cap.read() == False:
+    if medyam.read() == False:
         print ("Okuma islemi hatali sonuclandi")
         break
 
@@ -38,5 +46,5 @@ while(True):
         break
 
 # Her sey tamamlandiginda kapat
-cap.release()
+medyam.release()
 cv2.destroyAllWindows()
