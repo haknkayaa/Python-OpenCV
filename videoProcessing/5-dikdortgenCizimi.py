@@ -1,7 +1,7 @@
 # @title      :  Drawing Line
 # @author     :  Hakan Kaya
 # @date       :  09.09.2016
-# @description:  Dikdörtgen çizimleri
+# @description:  Dikdortgen cizimleri
 
 import numpy as np
 import cv2
