@@ -1,7 +1,6 @@
 # Video Processing
 
 
-
  **Author**     [Hakan Kaya](www.facebook.com/haknkayaa)        
  **Website**     [www.hakankaya.kim](www.hakankaya.kim)          
  **Mail**    [mail@hakankaya.kim](mailto:mail@hakankaya.kim)
