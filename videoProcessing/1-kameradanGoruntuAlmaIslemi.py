@@ -20,7 +20,7 @@ print """
 kameram = cv2.VideoCapture(1)
 
 # Acilma sorgulamasi
-if kameram.isOpened() == False:
+if not kameram.isOpened():
     print ("Hata: Secili aygittan goruntu alinamadi.")       # Ekrana hata bastirma
     kameram.open(0)                                   # Bir daha dene yada farkli aygit dene
 

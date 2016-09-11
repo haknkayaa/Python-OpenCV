@@ -19,7 +19,7 @@ print """
 medyam = cv2.VideoCapture('./Assets/video1.mp4')
 
 
-if medyam.isOpened() == False:
+if not medyam.isOpened():
     print "Hata: Medya acilamadi."
     medyam.open('./Assets/video1.mp4')
 
