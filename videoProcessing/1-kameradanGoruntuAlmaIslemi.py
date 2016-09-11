@@ -27,7 +27,7 @@ if kameram.isOpened() == False:
 print "Yukleme basarili..."
 
 while(True):
-    # yakalama
+    # Yakalama
     ret, orjinalGoruntu = kameram.read()
 
     # cap.read() True/False dondurur islem basarili yada degilse
