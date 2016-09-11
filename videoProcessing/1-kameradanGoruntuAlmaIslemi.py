@@ -48,5 +48,5 @@ while(True):
         break
 
 # Her sey tamamlandiginda kapat
-cap.release()
+kameram.release()
 cv2.destroyAllWindows()
