@@ -1,12 +1,12 @@
 # Video Processing
 =================================
 
-@author      : Hakan Kaya 
-@date        : 10.09.2016
-@description :
+@author      : Hakan Kaya <br>
+@date        : 10.09.2016 <br>
+@description :            <br>
 
 
-Summary:
+Summary: <br>
 
 1-captureVideoFromCamera.py
 2-captureVideoFromFile.py
