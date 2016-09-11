@@ -16,7 +16,7 @@ print """
 -----------------------------------------------
 """
 
-# 0. aygittan goruntu almak icin tanimlama
+# 1. aygittan goruntu almak icin tanimlama
 kameram = cv2.VideoCapture(1)
 
 # Acilma sorgulamasi
@@ -35,14 +35,14 @@ while(True):
         print ("Okuma islemi hatali sonuclandi...")
         break
 
-    # yakalandiktan sonra islem yapm
+    # Grilestirme islemi
     gray = cv2.cvtColor(orjinalGoruntu, cv2.COLOR_BGR2GRAY)
 
     # Gosterme
     cv2.namedWindow("Grilesmis Goruntu", cv2.WINDOW_NORMAL)
     cv2.imshow('Grilesmis Goruntu',gray)
 
-    # Cikis icin Q
+    # Cikis icin ESC
     if cv2.waitKey(1) & 0xFF == 27:
         print "Cikis yapildi"
         break
