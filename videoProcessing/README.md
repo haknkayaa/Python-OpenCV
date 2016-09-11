@@ -1,16 +1,20 @@
 # Video Processing
-=================================
-
-@author      : Hakan Kaya <br>
-@date        : 10.09.2016 <br>
-@description :            <br>
 
 
-Summary: <br>
 
-1-captureVideoFromCamera.py
-2-captureVideoFromFile.py
-3-savingVideo.py
-4-drawingLine.py
-5-drawingRectangle.py
-6-changingColorspaces.py
+ **Author**     [Hakan Kaya](www.facebook.com/haknkayaa)        
+ **Website**     [www.hakankaya.kim](www.hakankaya.kim)          
+ **Mail**    [mail@hakankaya.kim](mailto:mail@hakankaya.kim)
+
+
+> Temel fonksiyonlardan karmaşık fonksiyonlara kadar uzan görüntü işleme
+> ve video işleme çalışamalarım derli toplu halde paylaştım.
+
+### OpenCV - Video İşleme  çalışmalarım
+
++ 1-kameradanGoruntuAlmaIslemi.py
++ 2-dosyadanGoruntuOkuma.py
++ 3-videoKaydiAlma.py
++ 4-cizgiCizimi.py
++ 5-drawingRectangle.py
++ 6-changingColorspaces.py
