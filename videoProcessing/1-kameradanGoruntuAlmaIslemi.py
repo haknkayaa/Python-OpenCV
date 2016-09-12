@@ -6,7 +6,6 @@
 
 
 # Kutuphaneler
-import numpy as np
 import cv2
 
 print """
@@ -19,10 +18,12 @@ print """
 # 1. aygittan goruntu almak icin tanimlama
 kameram = cv2.VideoCapture(1)
 
-# Acilma sorgulamasi
-if not kameram.isOpened():
+
+if not kameram.isOpened():                                   # Acilma sorgulamasi
     print ("Hata: Secili aygittan goruntu alinamadi.")       # Ekrana hata bastirma
-    kameram.open(0)                                   # Bir daha dene yada farkli aygit dene
+    kameram.open(0)                                          # Bir daha dene yada farkli aygit dene
+# end if
+
 
 print "Yukleme basarili..."
 
@@ -34,6 +35,7 @@ while(True):
     if kameram.read() == False:
         print ("Okuma islemi hatali sonuclandi...")
         break
+    # end if
 
     # Grilestirme islemi
     gray = cv2.cvtColor(orjinalGoruntu, cv2.COLOR_BGR2GRAY)
@@ -46,6 +48,7 @@ while(True):
     if cv2.waitKey(1) & 0xFF == 27:
         print "Cikis yapildi"
         break
+    # end if
 
 # Her sey tamamlandiginda kapat
 kameram.release()

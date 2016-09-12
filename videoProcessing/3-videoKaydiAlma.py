@@ -4,7 +4,7 @@
 # @update     :  11.09.2016
 # @description:  Video kaydi yapma ve kaydetme
 
-import numpy as np
+# Kutuphaneler
 import cv2
 
 print """
@@ -24,6 +24,7 @@ out = cv2.VideoWriter('./Assets/output.avi', fourcc, 20.0, (640,480))
 if not kameram.isOpened():
     print "Hata: Aygitta baglanilamadi."
     kameram.open(0)
+# end if
 
 print "Baglanti gerceklesti..."
 
@@ -44,13 +45,16 @@ while True:
         cv2.namedWindow("frame", cv2.WINDOW_NORMAL)
         cv2.imshow('frame', frame)
 
-        # q ile cikis
+        # Q ile cikis
         if cv2.waitKey(1) & 0xFF == ord('q'):
             break
+        # end if
+    # end if
 
     else:
         print "Selam"
         break
+    # end else
 
 # Isler bittiginde her seyi sal
 kameram.release()

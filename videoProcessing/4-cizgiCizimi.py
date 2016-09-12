@@ -21,5 +21,4 @@ cv2.imshow("img",img)
 if cv2.waitKey(0) & 0xFF == ord('q'):
     print "Cikis yapildi"
     cv2.destroyAllWindows()
-
-
+# end if

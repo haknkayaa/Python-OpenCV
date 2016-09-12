@@ -5,7 +5,6 @@
 # @description:  Video okuma ve gosterme islemi yapilmasi
 
 # Kutuphaneler
-import numpy as np
 import cv2
 
 print """
@@ -22,7 +21,7 @@ medyam = cv2.VideoCapture('./Assets/video1.mp4')
 if not medyam.isOpened():
     print "Hata: Medya acilamadi."
     medyam.open('./Assets/video1.mp4')
-
+# end if
 
 while(True):
 
@@ -33,6 +32,7 @@ while(True):
     if medyam.read() == False:
         print ("Okuma islemi hatali sonuclandi")
         break
+    # end if
 
     # yakalandiktan sonra islem yapma
     gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
@@ -44,6 +44,7 @@ while(True):
     if cv2.waitKey(1) & 0xFF == ord('q'):
         print "Cikis yapildi"
         break
+    # end if
 
 # Her sey tamamlandiginda kapat
 medyam.release()

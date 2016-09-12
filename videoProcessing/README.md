@@ -17,3 +17,10 @@
 + 4-cizgiCizimi.py
 + 5-drawingRectangle.py
 + 6-changingColorspaces.py
+
+
+### Ekstralar
+
+- kirmiziObjeİzleme.py 
+- yesilObjeFiltreleme.py 
+
