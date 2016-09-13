@@ -43,13 +43,14 @@ def main():
         # cvt Color
         imgHSV = cv2.cvtColor(imgOriginal, cv2.COLOR_BGR2HSV)
 
+
         imgThreshLow  = cv2.inRange(imgHSV, (0, 155, 155), (18, 255, 255))
         imgThreshHigh = cv2.inRange(imgHSV, (165, 155, 155), (179, 255, 255))
 
         imgThresh = cv2.add(imgThreshLow, imgThreshHigh)
         imgThresh = cv2.GaussianBlur(imgThresh, (3, 3), 2)
         imgThresh = cv2.dilate(imgThresh, np.ones((5,5),np.uint8))
-        imgThresh = cv2.erode(imgThresh, np.ones((5,5),np.uint8))
+        imgThresh = cv2.erode(imgThresh,  np.ones((5,5),np.uint8))
 
         intRows, intColumns = imgThresh.shape
 
