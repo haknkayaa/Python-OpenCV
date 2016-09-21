@@ -1,5 +1,11 @@
+# @title      :  Resim icin uygun esik degeri bulma
+# @author     :  Hakan Kaya
+# @date       :  03.09.2016
+# @update     :  11.09.2016 by Hakan Kaya
+# @description:
+
+
 import cv2
-import numpy as np
 from matplotlib import pyplot as plt
 
 img = cv2.imread('./Assets/sudoku.jpg', 0)

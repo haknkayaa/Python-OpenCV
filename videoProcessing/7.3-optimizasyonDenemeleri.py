@@ -1,19 +1,26 @@
+# @title      :  Esik degeri optimizasyon denemeleri
+# @author     :  Hakan Kaya
+# @date       :  03.09.2016
+# @update     :  11.09.2016 by Hakan Kaya
+# @description:  Video okuma ve gosterme islemi yapilmasi
+
+
 import cv2
 from matplotlib import pyplot as plt
 
 img = cv2.imread('./Assets/sudoku.jpg', 0)
 
-# global thresholding
+
 ret1, th1 = cv2.threshold(img, 127, 255, cv2.THRESH_BINARY)
 
-# Otsu's thresholding
+
 ret2, th2 = cv2.threshold(img, 0, 255, cv2.THRESH_BINARY + cv2.THRESH_OTSU)
 
-# Otsu's thresholding after Gaussian filtering
+
 blur = cv2.GaussianBlur(img, (5, 5), 0)
 ret3, th3 = cv2.threshold(blur, 0, 255, cv2.THRESH_BINARY + cv2.THRESH_OTSU)
 
-# plot all the images and their histograms
+
 images = [img, 0, th1,
           img, 0, th2,
           blur, 0, th3]

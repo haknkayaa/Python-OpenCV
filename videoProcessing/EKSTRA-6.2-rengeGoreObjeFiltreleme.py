@@ -1,3 +1,10 @@
+# @title      :  Goruntu Aygitindan Goruntu Alma
+# @author     :  Hakan Kaya
+# @date       :  03.09.2016
+# @update     :  11.09.2016 by Hakan Kaya
+# @description:  Video okuma ve gosterme islemi yapilmasi
+
+
 """
 Kirmizi rengin BGR kodu: 0,0,255 dir.
 """
