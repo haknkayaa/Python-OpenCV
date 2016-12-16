@@ -7,6 +7,7 @@
 
 # Kutuphaneler
 import cv2
+import numpy as np
 
 print """
 -----------------------------------------------
@@ -16,25 +17,22 @@ print """
 """
 
 # 1. aygittan goruntu almak icin tanimlama
-kameram = cv2.VideoCapture(1)
-
-if not kameram.isOpened():  # Acilma sorgulamasi
-    print ("Hata: Secili aygittan goruntu alinamadi.")  # Ekrana hata bastirma
-    kameram.open(0)  # Bir daha dene yada farkli aygit dene
-# end if
-
+kameram = cv2.VideoCapture(0)
 
 print "Yukleme basarili..."
 
-while (True):
+
+def draw_circle(event, x, y, flags, param):
+
+
+    if event == cv2.EVENT_LBUTTONDBLCLK:
+        cv2.circle(gray, (x, y), 100, (255, 0, 0), -1)
+
+
+while True:
+
     # Yakalama
     ret, orjinalGoruntu = kameram.read()
-
-    # cap.read() True/False dondurur islem basarili yada degilse
-    if kameram.read() == False:
-        print ("Okuma islemi hatali sonuclandi...")
-        break
-    # end if
 
     # Grilestirme islemi
     gray = cv2.cvtColor(orjinalGoruntu, cv2.COLOR_BGR2GRAY)
@@ -42,6 +40,8 @@ while (True):
     # Gosterme
     cv2.namedWindow("Grilesmis Goruntu", cv2.WINDOW_NORMAL)
     cv2.imshow('Grilesmis Goruntu', gray)
+
+    cv2.setMouseCallback('Grilesmis Goruntu', draw_circle)
 
     # Cikis icin ESC
     if cv2.waitKey(1) & 0xFF == 27:

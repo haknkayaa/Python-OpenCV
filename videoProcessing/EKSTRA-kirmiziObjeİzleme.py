@@ -39,6 +39,8 @@ def main():
             print "Error: Aygittan frame alinamadi. :(\n"
             os.system("pause")
             break
+        # end if
+
 
         # cvt Color
         imgHSV = cv2.cvtColor(imgOriginal, cv2.COLOR_BGR2HSV)
@@ -62,6 +64,8 @@ def main():
                 print "ball position x = " + str(x) + ", y = " + str(y) + ", radius = " + str(radius)
                 cv2.circle(imgOriginal, (x, y), 3, (0, 255, 0), cv2.FILLED)
                 cv2.circle(imgOriginal, (x, y), radius, (0, 0, 255), 3)
+
+
             # end for
         # end if
 

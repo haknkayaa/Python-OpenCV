@@ -1,0 +1,19 @@
+import cv2
+
+kameram = cv2.VideoCapture(0)
+
+# kameram.open(0)
+
+while (True):
+
+    ret, orjinalGoruntu = kameram.read(0)
+
+    gray = cv2.cvtColor(orjinalGoruntu, cv2.COLOR_BGR2GRAY)
+
+    cv2.imshow("Gri goruntu", gray)
+
+    if cv2.waitKey(1) & 0xFF == 27:
+        break
+
+kameram.release()
+cv2.destroyAllWindows()
